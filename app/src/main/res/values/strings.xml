@@ -3,4 +3,5 @@
     <string name="select_kbd">пернетақтаны орнату</string>
     <string name="select_kbd_instructions">Пернетақталар қосу ==> "QazaqLatynKeyboard" түртіп қою</string>
     <string name="website"><a href="https://www.abcnet.kz/">www.abcnet.kz</a></string>
+    <string name="action_share" translatable="false">share</string>
 </resources>
