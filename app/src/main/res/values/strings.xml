@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AbcnetKeyboard</string>
+    <string name="select_kbd">пернетақтаны орнату</string>
+    <string name="select_kbd_instructions">Пернетақталар қосу ==> "QazaqLatynKeyboard" түртіп қою</string>
+</resources>
