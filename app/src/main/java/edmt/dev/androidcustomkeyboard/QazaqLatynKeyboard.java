@@ -1,4 +1,4 @@
-package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
+package edmt.dev.androidcustomkeyboard;
 
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
@@ -8,6 +8,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
+
+import edmt.dev.androidcustomkeyboard.KeyboardViewMine;
+import edmt.dev.androidcustomkeyboard.R;
 
 public class QazaqLatynKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 

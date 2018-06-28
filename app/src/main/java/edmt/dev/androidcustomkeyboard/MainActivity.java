@@ -1,6 +1,7 @@
-package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
+package edmt.dev.androidcustomkeyboard;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.ShareActionProvider;
+
+import edmt.dev.androidcustomkeyboard.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,18 +42,24 @@ public class MainActivity extends AppCompatActivity {
         final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
 
         String extra_text ="Sálem. Myna applicationdi ózine ornatsang bolady - Qazaq Latyn pernetaqtasy. \n";
-                extra_text+="https://play.google.com/store/apps/details?id=" + "qz.aygolek.englishwordsapp";
+                extra_text+="https://play.google.com/store/apps/details?id=" + appPackageName;
 
         shareIntent.putExtra(Intent.EXTRA_TEXT,extra_text);
 
-        shortcutIcon();
-
-
-
-
+        createShortcutIcon();
     }
 
-    private void shortcutIcon(){
+
+    final static public String PREFS_NAME = "PREFS_NAME";
+    final static private String PREF_KEY_SHORTCUT_ADDED = "PREF_KEY_SHORTCUT_ADDED";
+
+    // Creates shortcut on Android widget screen
+    private void createShortcutIcon(){
+
+        // Checking if ShortCut was already added
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        boolean shortCutWasAlreadyAdded = sharedPreferences.getBoolean(PREF_KEY_SHORTCUT_ADDED, false);
+        if (shortCutWasAlreadyAdded) return;
 
         Intent shortcutIntent = new Intent(getApplicationContext(), MainActivity.class);
         shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -58,11 +67,15 @@ public class MainActivity extends AppCompatActivity {
 
         Intent addIntent = new Intent();
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, R.string.app_name);
-        addIntent.putExtra("duplicate", false);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.mipmap.ic_launcher_qz));
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Qaz Latyn keyboard");
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.icon_qaz_kbd));
         addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
         getApplicationContext().sendBroadcast(addIntent);
+
+        // Remembering that ShortCut was already added
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(PREF_KEY_SHORTCUT_ADDED, true);
+        editor.commit();
     }
 
     @Override

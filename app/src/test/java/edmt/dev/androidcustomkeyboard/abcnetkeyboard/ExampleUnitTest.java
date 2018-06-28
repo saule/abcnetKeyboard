@@ -1,4 +1,4 @@
-package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
+package edmt.dev.androidcustomkeyboard.abcnetkeyboard;
 
 import org.junit.Test;
 

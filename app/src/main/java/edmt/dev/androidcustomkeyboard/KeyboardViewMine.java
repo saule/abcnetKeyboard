@@ -1,4 +1,4 @@
-package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
+package edmt.dev.androidcustomkeyboard;
 
 import android.content.Context;
 import android.graphics.Canvas;

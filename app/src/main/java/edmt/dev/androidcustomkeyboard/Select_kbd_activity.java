@@ -1,13 +1,11 @@
-package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
+package edmt.dev.androidcustomkeyboard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ShareActionProvider;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +13,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
 import android.widget.Button;
 import android.widget.TextView;
+
+import edmt.dev.androidcustomkeyboard.R;
 
 public class Select_kbd_activity extends AppCompatActivity {
 
@@ -54,7 +54,7 @@ public class Select_kbd_activity extends AppCompatActivity {
         final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
 
         String extra_text ="Sálem. Myna applicationdi ózine ornatsang bolady - Qazaq Latyn pernetaqtasy. \n";
-        extra_text+="https://play.google.com/store/apps/details?id=" + "qz.aygolek.englishwordsapp";
+        extra_text+="https://play.google.com/store/apps/details?id=" +  appPackageName;
 
         shareIntent.putExtra(Intent.EXTRA_TEXT,extra_text);
 
