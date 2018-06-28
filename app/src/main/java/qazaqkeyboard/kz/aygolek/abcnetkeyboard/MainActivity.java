@@ -1,7 +1,6 @@
 package qazaqkeyboard.kz.aygolek.abcnetkeyboard;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.support.v7.widget.ShareActionProvider;
 
@@ -30,14 +28,21 @@ public class MainActivity extends AppCompatActivity {
         btn_select_kbd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Select_kbd_layout.class);
+                Intent intent = new Intent(MainActivity.this, Select_kbd_activity.class);
                 startActivity(intent);
             }
         });
 
         shareIntent.setType("text/plain");
         shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        shareIntent.putExtra(Intent.EXTRA_TEXT,"https://bit.ly/2rSy9px");
+
+        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+
+        String extra_text ="Sálem. Myna applicationdi ózine ornatsang bolady - Qazaq Latyn pernetaqtasy. \n";
+                extra_text+="https://play.google.com/store/apps/details?id=" + "qz.aygolek.englishwordsapp";
+
+        shareIntent.putExtra(Intent.EXTRA_TEXT,extra_text);
+
 
 
 
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.detailfragment, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         // Locate MenuItem with ShareActionProvider
         MenuItem shareMenu = menu.findItem(R.id.action_share);
 

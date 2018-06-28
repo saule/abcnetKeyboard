@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 
-public class AbcnetKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+public class QazaqLatynKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     private KeyboardViewMine kv;
     private Keyboard keyboard;
