@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         shareIntent.setType("text/plain");
         shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        shareIntent.putExtra(Intent.EXTRA_TEXT,"#abcnet.kz");
+        shareIntent.putExtra(Intent.EXTRA_TEXT,"https://bit.ly/2rSy9px");
 
 
 

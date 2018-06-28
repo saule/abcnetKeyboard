@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">AbcnetKeyboard</string>
     <string name="select_kbd">пернетақтаны орнату</string>
-    <string name="select_kbd_instructions">Пернетақталар қосу ==> "QazaqLatynKeyboard" түртіп қою</string>
+    <string name="select_kbd_instructions_kz">Тізімнен <font color='#EE0000'>\"QazaqLatynKeyboard\"</font> пернетақтасын таңдаңыз. Егер ол тізімде жоқ болса,
+        \"Пернетақталар қосу ==> QazaqLatynKeyboard\" дегенді алдымен түртіп қою қажет.
+
+    </string>
+
+    <string name="select_kbd_instructions_ru">
+
+        Выберите из списка клавиатуру \"QazaqLatynKeyboard\". Если она отсутствеут в списке, ее нужно добавить с помощью
+        \"Добавить клавиатуры ==> QazaqLatynKeyboard\".
+    </string>
     <string name="website"><a href="https://www.abcnet.kz/">www.abcnet.kz</a></string>
     <string name="action_share" translatable="false">share</string>
 </resources>

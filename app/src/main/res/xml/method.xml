@@ -2,7 +2,7 @@
 <input-method xmlns:android="http://schemas.android.com/apk/res/android">
     <subtype
         android:label="Qazaq (Latin 555)"
-        android:imeSubtypeLocale="qazaq (Qazaqstan 555)"
+        android:imeSubtypeLocale="abcnet.kz"
         android:imeSubtypeMode="keyboard"
         />
 <!--   android:imeSubtypeLocale="en_US"  -->
