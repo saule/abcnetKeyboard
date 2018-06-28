@@ -94,7 +94,7 @@ public class Select_kbd_activity extends AppCompatActivity {
                 (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
 
         if (imeManager!=null) {
-            String str = new String();
+            String str;
             currentInputMethodSubtype = imeManager.getCurrentInputMethodSubtype();
 
             if (currentInputMethodSubtype.getLocale().equals("Qazaq (Qazaqstan)")) {
