@@ -97,7 +97,7 @@ public class Select_kbd_activity extends AppCompatActivity {
             String str = new String();
             currentInputMethodSubtype = imeManager.getCurrentInputMethodSubtype();
 
-            if (currentInputMethodSubtype.getLocale().equals("qazaq (Qazaqstan)")) {
+            if (currentInputMethodSubtype.getLocale().equals("Qazaq (Qazaqstan)")) {
               //  btn_select_kbd.setClickable(false);
                 //btn_select_kbd.setEnabled(false);
                 selected_kbd_txtview.setText("Қазақ латын пернетақтасы орнатылған");
